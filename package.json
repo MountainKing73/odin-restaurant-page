@@ -1,0 +1,27 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MountainKing73/odin-restaurant-page.git"
+  },
+  "author": "James Cummings",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/MountainKing73/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/MountainKing73/odin-restaurant-page#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
