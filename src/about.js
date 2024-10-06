@@ -8,13 +8,28 @@ function showAbout() {
   name.textContent = "About";
   content.appendChild(name);
 
-  const restImg = document.createElement("img");
-  restImg.src = restImage;
-  content.appendChild(restImg);
+  const hours = document.createElement("h2");
+  hours.textContent = "Hours";
+  content.appendChild(hours);
 
-  const testimonial = document.createElement("p");
-  testimonial.textContent = "The best restaurant ever - Everyone";
-  content.appendChild(testimonial);
+  const list = document.createElement("ul");
+  content.appendChild(list);
+
+  const hourList = [
+    "Sunday:        7am - 10pm",
+    "Monday:        7am - 10pm",
+    "Tuesday:       7am - 10pm",
+    "Wednesday:     7am - 10pm",
+    "Thursday:      7am - 10pm",
+    "Friday:        7am - 10pm",
+    "Saturday:      7am - 10pm",
+  ];
+
+  hourList.forEach((element) => {
+    const day = document.createElement("li");
+    day.textContent = element;
+    list.appendChild(day);
+  });
 }
 
 export { showAbout };

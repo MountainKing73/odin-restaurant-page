@@ -8,13 +8,34 @@ function showMenu() {
   name.textContent = "MENU";
   content.appendChild(name);
 
-  const restImg = document.createElement("img");
-  restImg.src = restImage;
-  content.appendChild(restImg);
+  const menuSections = ["Appetizers", "Mains", "Desserts"];
+  const appOptions = ["Salad", "Nachos", "Shrimp Coctail"];
+  const mainOptions = ["Steak", "Chicken", "Salmon"];
+  const dessertOptions = ["Chocolate Cake", "Ice Cream", "Cheesecake"];
 
-  const testimonial = document.createElement("p");
-  testimonial.textContent = "The best restaurant ever - Everyone";
-  content.appendChild(testimonial);
+  menuSections.forEach((element) => {
+    const section = document.createElement("h2");
+    section.textContent = element;
+    content.appendChild(section);
+
+    const list = document.createElement("ul");
+    content.appendChild(list);
+
+    let options = [];
+
+    if (element === "Appetizers") {
+      options = appOptions;
+    } else if (element === "Mains") {
+      options = mainOptions;
+    } else {
+      options = dessertOptions;
+    }
+
+    options.forEach((option) => {
+      const opt = document.createElement("li");
+      opt.textContent = option;
+      list.appendChild(opt);
+    });
+  });
 }
-
 export { showMenu };
